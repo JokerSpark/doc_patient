@@ -1,0 +1,44 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOCTOR SIGNUP</h1>
+    <!-- {{ userForm.as_p }}
+    {{ DoctorForm.as_p }} -->
+
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <label for="">First name</label><input type="text" name="first_name"><br><br>
+        <label for="">Last name</label><input type="text" name="last_name"><br><br>
+        <label for="">User name</label><input type="text" name="username"><br><br>
+        <label for="">Password</label><input type="password" name="password"><br><br>
+        <label for="">Gender</label>
+        <select class="form-select" name="gender" >
+            <option value="Male">Male</option>
+              <option value="Female">Female</option>  
+        </select><br><br>
+        <label for="">Mobile</label><input type="number" name="mobile"><br><br>
+        
+
+        <label for="">Specialist</label>
+        <select class="form-select" name="specialist" >
+            <option value="Anemia">Anemia</option>
+              <option value="Deep vein thrombosis">Deep vein thrombosis</option>  
+              <option value="lymphoma">lymphoma</option>  
+              <option value="Sepsis">Sepsis</option>  
+              <option value="Hemophilia">Hemophilia</option>  
+
+        </select><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
